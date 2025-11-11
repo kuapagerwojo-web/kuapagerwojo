@@ -1,0 +1,10 @@
+kua-pagerwojo/
+│
+├─ index.html
+├─ admin.html
+├─ style.css
+├─ script.js
+├─ admin.js
+└─ data/
+   ├─ jadwalNikah.json
+   └─ beritaList.json
