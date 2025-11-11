@@ -1,67 +1,274 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>KUA Pagerwojo - Tulungagung</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" />
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-    header { background: #006b3c; color: white; text-align: center; padding: 20px; }
-    nav { background: #004d2a; padding: 10px; text-align: center; }
-    nav a { color: white; text-decoration: none; margin: 0 15px; font-weight: bold; }
-    nav a:hover { text-decoration: underline; }
-    section { padding: 20px; }
-    footer { background: #006b3c; color: white; text-align: center; padding: 10px; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    nav.navbar {
+      background-color: #006b3c;
+    }
+    nav a.nav-link {
+      color: white !important;
+      font-weight: 500;
+    }
+    nav a.nav-link:hover {
+      color: #ffc107 !important;
+    }
+    header {
+      background: linear-gradient(rgba(0,107,60,0.85), rgba(0,107,60,0.85)),
+        url('https://images.unsplash.com/photo-1581090464824-1e7e3c6d48f9?auto=format&fit=crop&w=1200&q=60') center/cover;
+      color: white;
+      text-align: center;
+      padding: 120px 20px;
+    }
+    footer {
+      background: #006b3c;
+      color: white;
+      padding: 15px 0;
+      text-align: center;
+    }
+    .section-title {
+      border-left: 5px solid #006b3c;
+      padding-left: 10px;
+      margin-bottom: 20px;
+    }
+    .btn-kemenag {
+      background-color: #006b3c;
+      color: white;
+    }
+    .btn-kemenag:hover {
+      background-color: #004d2a;
+      color: #fff;
+    }
+    .news-card img {
+      height: 180px;
+      object-fit: cover;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Kantor Urusan Agama (KUA) Kecamatan Pagerwojo</h1>
-    <p>Kementerian Agama Kabupaten Tulungagung</p>
-  </header>
 
-  <nav>
-    <a href="#beranda">Beranda</a>
-    <a href="#profil">Profil</a>
-    <a href="#layanan">Layanan</a>
-    <a href="#jadwal">Jadwal Nikah</a>
-    <a href="#kontak">Kontak</a>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="#">KUA Pagerwojo</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#beranda">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="#profil">Profil</a></li>
+          <li class="nav-item"><a class="nav-link" href="#layanan">Layanan</a></li>
+          <li class="nav-item"><a class="nav-link" href="#berita">Berita</a></li>
+          <li class="nav-item"><a class="nav-link" href="#galeri">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="#jadwal">Jadwal Nikah</a></li>
+          <li class="nav-item"><a class="nav-link" href="#pendaftaran">Pendaftaran</a></li>
+          <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-  <section id="beranda">
-    <h2>Selamat Datang di Website Resmi KUA Pagerwojo</h2>
-    <p>KUA Pagerwojo siap melayani masyarakat dalam urusan pernikahan, bimbingan, dan pelayanan keagamaan lainnya.</p>
+  <!-- Header -->
+  <header id="beranda">
+    <div class="container">
+      <h1 class="fw-bold mb-3">Kantor Urusan Agama (KUA) Kecamatan Pagerwojo</h1>
+      <p class="lead">Kementerian Agama Kabupaten Tulungagung</p>
+      <a href="#layanan" class="btn btn-kemenag mt-3">Lihat Layanan</a>
+    </div>
+  </header>
+
+  <!-- Profil -->
+  <section id="profil" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Profil KUA Pagerwojo</h2>
+      <p>
+        KUA Pagerwojo merupakan unit kerja di bawah Kementerian Agama Kabupaten Tulungagung yang bertugas
+        memberikan pelayanan keagamaan bagi masyarakat di wilayah Kecamatan Pagerwojo, termasuk urusan
+        pencatatan nikah, bimbingan pra-nikah, penyuluhan keagamaan, dan pengelolaan zakat serta wakaf.
+      </p>
+    </div>
   </section>
 
-  <section id="profil">
-    <h2>Profil KUA Pagerwojo</h2>
-    <p>KUA Pagerwojo merupakan unit kerja di bawah Kementerian Agama Kabupaten Tulungagung yang bertugas memberikan layanan keagamaan di wilayah Kecamatan Pagerwojo.</p>
+  <!-- Layanan -->
+  <section id="layanan" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Layanan Kami</h2>
+      <div class="row">
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Pencatatan Nikah</h5>
+              <p class="card-text">Pelayanan pencatatan pernikahan bagi masyarakat sesuai ketentuan syariat dan hukum negara.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 mb-3">
+          <div class="card h-100">
+            <div class="card-body">
+              <h5 class="card-title text-success">Bimbingan Pra Nikah</h5>
+              <p class="card-text">Program bimbingan bagi calon pengantin untuk membangun keluarga sakinah mawaddah warahmah.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section id="layanan">
-    <h2>Layanan Kami</h2>
-    <ul>
-      <li>Pencatatan Nikah</li>
-      <li>Bimbingan Pra Nikah</li>
-      <li>Penyuluhan Keagamaan</li>
-      <li>Pelayanan Zakat dan Wakaf</li>
-    </ul>
+  <!-- Berita -->
+  <section id="berita" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Berita & Kegiatan</h2>
+      <div class="row" id="newsContainer">
+        <!-- Berita akan dimuat lewat JavaScript -->
+      </div>
+    </div>
   </section>
 
-  <section id="jadwal">
-    <h2>Jadwal Pernikahan</h2>
-    <p>Silakan hubungi petugas KUA untuk mendapatkan informasi jadwal pernikahan terbaru.</p>
+  <!-- Galeri -->
+  <section id="galeri" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Galeri Kegiatan</h2>
+      <div class="row g-3 gallery">
+        <div class="col-md-4"><img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?auto=format&fit=crop&w=800&q=60" alt="Kegiatan 1"></div>
+        <div class="col-md-4"><img src="https://images.unsplash.com/photo-1558021211-6d1403321394?auto=format&fit=crop&w=800&q=60" alt="Kegiatan 2"></div>
+        <div class="col-md-4"><img src="https://images.unsplash.com/photo-1573496529574-be85d6a60704?auto=format&fit=crop&w=800&q=60" alt="Kegiatan 3"></div>
+      </div>
+    </div>
   </section>
 
-  <section id="kontak">
-    <h2>Kontak Kami</h2>
-    <p>Alamat: Jl. Raya Pagerwojo No. 45, Tulungagung</p>
-    <p>Telepon: (0355) 123456</p>
-    <p>Email: kua.pagerwojo@kemenag.go.id</p>
+  <!-- Jadwal Nikah -->
+  <section id="jadwal" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Jadwal Nikah Terbaru</h2>
+      <table class="table table-bordered">
+        <thead class="table-success">
+          <tr>
+            <th>Tanggal</th>
+            <th>Nama Pasangan</th>
+            <th>Lokasi</th>
+          </tr>
+        </thead>
+        <tbody id="jadwalTable"></tbody>
+      </table>
+    </div>
   </section>
 
+  <!-- Pendaftaran Nikah -->
+  <section id="pendaftaran" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="section-title">Form Pendaftaran Nikah Online</h2>
+      <form id="formNikah">
+        <div class="row g-3">
+          <div class="col-md-6">
+            <label class="form-label">Nama Calon Suami</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Nama Calon Istri</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Tanggal Nikah</label>
+            <input type="date" class="form-control" required />
+          </div>
+          <div class="col-md-6">
+            <label class="form-label">Tempat Pelaksanaan</label>
+            <input type="text" class="form-control" required />
+          </div>
+          <div class="col-12">
+            <label class="form-label">Nomor HP</label>
+            <input type="tel" class="form-control" required />
+          </div>
+          <div class="col-12 text-center mt-3">
+            <button type="submit" class="btn btn-kemenag">Kirim Pendaftaran</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Kontak -->
+  <section id="kontak" class="py-5">
+    <div class="container">
+      <h2 class="section-title">Kontak Kami</h2>
+      <p><strong>Alamat:</strong> Jl. Raya Pagerwojo No. 45, Tulungagung</p>
+      <p><strong>Telepon:</strong> (0355) 123456</p>
+      <p><strong>Email:</strong> kua.pagerwojo@kemenag.go.id</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
   <footer>
-    <p>© 2025 KUA Pagerwojo - Kementerian Agama RI</p>
+    <p>© 2025 KUA Pagerwojo - Kementerian Agama Republik Indonesia</p>
   </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // Data berita
+    const beritaData = [
+      {
+        judul: "Bimbingan Pra Nikah Angkatan I Tahun 2025",
+        gambar: "https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=800&q=60",
+        isi: "KUA Pagerwojo menyelenggarakan bimbingan pra nikah bagi calon pengantin sebagai bekal membangun rumah tangga sakinah mawaddah warahmah."
+      },
+      {
+        judul: "Kegiatan Penyuluhan Keagamaan di Desa Samar",
+        gambar: "https://images.unsplash.com/photo-1593113598332-cd6c9b4b9c71?auto=format&fit=crop&w=800&q=60",
+        isi: "Petugas KUA Pagerwojo melaksanakan penyuluhan keagamaan untuk meningkatkan pemahaman masyarakat tentang zakat dan wakaf."
+      }
+    ];
+
+    const newsContainer = document.getElementById('newsContainer');
+    beritaData.forEach(b => {
+      const div = document.createElement('div');
+      div.className = 'col-md-6 mb-4';
+      div.innerHTML = `
+        <div class="card news-card h-100 shadow-sm">
+          <img src="${b.gambar}" class="card-img-top" alt="${b.judul}">
+          <div class="card-body">
+            <h5 class="card-title text-success">${b.judul}</h5>
+            <p class="card-text">${b.isi}</p>
+          </div>
+        </div>
+      `;
+      newsContainer.appendChild(div);
+    });
+
+    // Data jadwal nikah
+    const jadwalNikah = [
+      { tanggal: '2025-11-15', pasangan: 'Ahmad & Aisyah', lokasi: 'KUA Pagerwojo' },
+      { tanggal: '2025-11-20', pasangan: 'Budi & Rina', lokasi: 'Balai Desa Ngepeh' },
+      { tanggal: '2025-11-25', pasangan: 'Dimas & Laila', lokasi: 'Masjid Al-Hikmah' }
+    ];
+    const jadwalTable = document.getElementById('jadwalTable');
+    jadwalNikah.forEach(item => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td>${item.tanggal}</td><td>${item.pasangan}</td><td>${item.lokasi}</td>`;
+      jadwalTable.appendChild(tr);
+    });
+
+    // Form pendaftaran
+    document.getElementById('formNikah').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Terima kasih! Pendaftaran nikah Anda telah dikirim. Petugas KUA akan menghubungi Anda segera.');
+      this.reset();
+    });
+  </script>
 </body>
 </html>
